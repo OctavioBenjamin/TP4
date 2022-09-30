@@ -38,7 +38,7 @@ def to_proyecto(linea, lista_leng):
     r = linea.split("|")
     usuario = r[0]
     repo = r[1]
-    descri = r[2]
+    descri = "  "
     fecha = r[3]
     leng = r[4]
     lista_leng.append(leng)
@@ -53,11 +53,10 @@ def to_proyecto(linea, lista_leng):
 
 
 
-class Populares:
-    def __init__(self, mes, tipo, estrellas, proyectos):
+class ElementoDeMatriz:
+    def __init__(self, mes, tipo, proyectos):
         self.mes = mes
         self.tipo = tipo
-        self.estrellas = estrellas
         self.proyectos = proyectos
 
     def __str__(self):
@@ -65,8 +64,6 @@ class Populares:
         linea += '{:<11}'.format(self.mes)
         linea += ' '
         linea += '{:<10}'.format(self.tipo)
-        linea += ' '
-        linea += '{:<10}'.format(self.estrellas)
         linea += ' '
         linea += '{:<10}'. format(self.proyectos)
         linea += ' '

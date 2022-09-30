@@ -1,43 +1,41 @@
 USUARIO | REPOSITORIO | DESCRIPCION | FECHA DE ACTUALIZACION | LENGUAJE | LIKES | TAGS | URL
-android10|Android-CleanArchitecture|This is a sample app that is part of a series of blog posts I have written about how to architect an android applicat|2017-03-07|Java|8.9|java,architectural,android-cleanarchitecture,android,android-application,android-development,android-architecture|https://github.com/android10/Android-CleanArchitecture
-roughike|BottomBar|A custom view component that mimics the new Material Design Bottom Navigation pattern.|2017-06-21|Java|6.5|android,java,library,material-design,bottom-navigation|https://github.com/roughike/BottomBar
-google|ExoPlayer|An extensible media player for Android|2017-06-24|Java|7|exoplayer,java,android,mediaplayer|https://github.com/google/ExoPlayer
-mikepenz|MaterialDrawer|The flexible, easy to use, all in one drawer library for your Android project.|2017-06-18|Java|7.7|android,java,drawer,materialdrawer,navigation-drawer,material-design,material-ui,android-library,android-development,material-components,android-ui,material-theme,drawerlayout,drawer-support,mikepenz|https://github.com/mikepenz/MaterialDrawer
-ReactiveX|RxJava|RxJava  Reactive Extensions for the JVM  a library for composing asynchronous and event-based programs using observ|2017-06-24|Java|25.2|flow,reactive-streams,java,rxjava|https://github.com/ReactiveX/RxJava
-deeplearning4j|deeplearning4j|Deep Learning for Java, Scala & Clojure on Hadoop & Spark With GPUs - From Skymind|2017-06-24|Java|6.9|intellij,hadoop,neural-nets,gpu,deeplearning4j,dl4j,java,spark,deeplearning|https://github.com/deeplearning4j/deeplearning4j
-alibaba|dubbo| Dubbo is a distributed, high performance RPC framework empowering applications with service import/export capabili|2017-06-22|Java|9.1|dubbo,java,distributed-systems,spring,high-performance,cluster,service-discovery,rpc,soa,service-registration,rpc-framework,service-consumer,service-provider,service-registry,service-oriented|https://github.com/alibaba/dubbo
-elastic|elasticsearch|Open Source, Distributed, RESTful Search Engine|2017-06-24|Java|23.4|java,search-engine,elasticsearch|https://github.com/elastic/elasticsearch
-alibaba|fastjson| A fast JSON parser/generator for Java|2017-06-24|Java|9.5|fastjson,java,android,serialization,json,json-serialization,deserialization,json-parser,json-serializer,best-performance|https://github.com/alibaba/fastjson
-jhipster|generator-jhipster|Open Source application generator for creating Spring Boot + Angular projects in seconds!|2017-06-24|JavaScript|7.3|java,docker,angular,webpack,generator,spring-boot,yeoman-generator|https://github.com/jhipster/generator-jhipster
-facebook|infer|A static analyzer for Java, C, C++, and Objective-C|2017-06-23|OCaml|6.9|java,c,objective-c,cpp,static-code-analysis,static-analysis,code-quality|https://github.com/facebook/infer
-kdn251|interviews|Everything you need to know to get the job.|2017-05-31|Java|9.8|java,algorithm,algorithms,leetcode,interview,interviews,interview-practice,algorithm-competitions,leetcode-solutions,interview-questions,technical-coding-interview,algorithm-challenges,coding-interviews,coding-challenge,leetcode-questions,coding-challenges,leetcode-java,interview-prep,interview-preparation,coding-interview|https://github.com/kdn251/interviews
-iluwatar|java-design-patterns|Design patterns implemented in Java|2017-06-15|Java|19.8|principles,java,design-patterns|https://github.com/iluwatar/java-design-patterns
-winterbe|java8-tutorial|Modern Java - A Guide to Java 8|2017-06-12|Java|7.3|lambda-expressions,java,stream,parallel-streams,learning,tutorial,guide,java-8|https://github.com/winterbe/java8-tutorial
-libgdx|libgdx|Desktop/Android/HTML5/iOS Java game development framework|2017-06-23|Java|11.8|game,java,libgdx,android,windows,linux,ios,framework,html5,cross-platform,macosx,3d,2d|https://github.com/libgdx/libgdx
-orhanobut|logger| Simple, pretty and powerful logger for android|2017-06-06|Java|6.7|android,java,log,logger,logcat,timber,pretty-printer,json-logging|https://github.com/orhanobut/logger
-elastic|logstash|Logstash - transport and process your logs, events, or other data|2017-06-24|Ruby|7.6|java,streaming,jruby,logging,real-time-processing,etl-framework|https://github.com/elastic/logstash
-playframework|playframework|Play Framework|2017-06-23|Scala|9.5|scala,java,reactive,restful,web-framework,play,playframework|https://github.com/playframework/playframework
-realm|realm-java|Realm is a mobile database: a replacement for SQLite & ORMs|2017-06-24|Java|8|java,android,mobile,database,realtime-database,nosql-database,mobile-database|https://github.com/realm/realm-java
-SeleniumHQ|selenium|A browser automation framework and ecosystem.|2017-06-24|JavaScript|6.9|selenium,java,python,ruby,webdriver|https://github.com/SeleniumHQ/selenium
-zxing|zxing|"Official ZXing (""Zebra Crossing"") project home"|2017-06-16|Java|14.1|java,zxing,android,barcode,barcode-scanner|https://github.com/zxing/zxing
-oo/odoo
-pandas-dev|pandas|Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R|2017-06-23|Python|10|data-analysis,flexible,pandas,python,alignment|https://github.com/pandas-dev/pandas
-getpelican|pelican|Static site generator that supports Markdown and reST syntax. Powered by Python.|2017-06-22|Python|7|python,static-site-generator,pelican|https://github.com/getpelican/pelican
-powerline|powerline|Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, includ|2017-06-07|Python|7.6|python,vim,bash,zsh,tmux,fish,ipython,prompt,powerline,statusline|https://github.com/powerline/powerline
-binux|pyspider|A Powerful Spider(Web Crawler) System in Python.|2017-06-20|Python|9|python,crawler|https://github.com/binux/pyspider
-kennethreitz|python-guide|Python best practices guidebook, written for Humans.|2017-06-22|Batchfile|11.7|python,book,guide,kennethreitz|https://github.com/kennethreitz/python-guide
-rasbt|python-machine-learning-book|"The ""Python Machine Learning"" book code repository and info resource"|2017-06-22|Jupyter Notebook|6.6|logistic-regression,data-science,neural-network,machine-learning-algorithms,machine-learning,scikit-learn,python,data-mining|https://github.com/rasbt/python-machine-learning-book
-faif|python-patterns|A collection of design patterns/idioms in Python|2017-06-20|Python|11.7|python,idioms,design-patterns|https://github.com/faif/python-patterns
-getredash|redash|Make Your Company Data Driven. Connect to any data source, easily visualize and share your data.|2017-06-24|Python|6.8|redshift,python,visualization,redash,mysql,bigquery,angular,bi,athena,analytics,postgresql|https://github.com/getredash/redash
-reddit|reddit|the code that powers reddit.com|2017-06-13|Python|13.4|python,javascript,reddit|https://github.com/reddit/reddit
-requests|requests|Python HTTP Requests for Humans |2017-06-16|Python|25.7|python,http,requests,forhumans,kennethreitz|https://github.com/requests/requests
-saltstack|salt|Software to automate the management and configuration of any infrastructure or application at scale. Get access to th|2017-06-24|Python|7.8|python,event-stream,zeromq,cloud-providers,event-management,configuration-management,remote-execution,infrastructure-management,cloud-management,cloud-provisioning|https://github.com/saltstack/salt
-scikit-learn|scikit-learn|scikit-learn: machine learning in Python|2017-06-24|Python|19.4|python,data-science,machine-learning,statistics,data-analysis|https://github.com/scikit-learn/scikit-learn
-scrapy|scrapy|Scrapy, a fast high-level web crawling & scraping framework for Python.|2017-06-23|Python|21.2|python,crawler,framework,scraping,crawling|https://github.com/scrapy/scrapy
-SeleniumHQ|selenium|A browser automation framework and ecosystem.|2017-06-24|JavaScript|6.9|selenium,java,python,ruby,webdriver|https://github.com/SeleniumHQ/selenium
-getsentry|sentry|Sentry is a cross-platform crash reporting and aggregation platform.|2017-06-24|Python|13|python,devops,django,monitoring,crash-reporting,error-monitoring,crash-reports,csp-report,error-log|https://github.com/getsentry/sentry
-sqlmapproject|sqlmap|Automatic SQL injection and database takeover tool|2017-06-23|Python|8.9|python,database,detection,sql-injection,pentesting,exploitation,takeover,vulnerability-scanner|https://github.com/sqlmapproject/sqlmap
-donnemartin|system-design-primer|Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.|2017-06-20|Python|17.5|interview-questions,python,design,development,programming,web,system,design-patterns,interview,web-application,webapp,interview-practice,design-system|https://github.com/donnemartin/system-design-primer
-tensorflow|tensorflow|Computation using data flow graphs for scalable machine learning|2017-06-24|C++|61.6|tensorflow,python,machine-learning,deep-neural-networks,deep-learning,neural-network,ml,distributed|https://github.com/tensorflow/tensorflow
-nvbn|thefuck|Magnificent app which corrects your previous console command.|2017-06-19|Python|28.6|python,shell|https://github.com/nvbn/thefuck
-tornadoweb|tornado|Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.|2017-06-21|Python|13.7|python,asynchronous|https://github.com/tornadoweb/tornado
+aymericdamien|TensorFlow-Examples|  |2017-06-18|Jupyter Notebook|12|tensorflow,python,machine-learning,tutorial,deep-learning,examples|https://github.com/aymericdamien/TensorFlow-Examples
+keon|algorithms|  |2017-06-22|Python|8.5|algorithm,python,data-structure,interview,competitive-programming|https://github.com/keon/algorithms
+ansible|ansible|  |2017-06-24|Python|23.9|python,ansible|https://github.com/ansible/ansible
+vinta|awesome-python|  |2017-06-18|Python|35.3|python,awesome,collections|https://github.com/vinta/awesome-python
+certbot|certbot|  |2017-06-23|Python|18.9|python,letsencrypt,acme-client,certificate,acme,certbot|https://github.com/certbot/certbot
+docker|compose|  |2017-06-23|Python|9.9|docker,python,docker-compose,orchestration|https://github.com/docker/compose
+donnemartin|data-science-ipython-notebooks|  |2017-06-18|Python|9.4|python,deep-learning,kaggle,numpy,scikit-learn,matplotlib,scipy,pandas,aws,data-science,machine-learning,caffe,theano,big-data,spark,hadoop,tensorflow,keras,mapreduce|https://github.com/donnemartin/data-science-ipython-notebooks
+hangtwenty|dive-into-machine-learning|  |2017-06-12||6.8|data-science,jupyter-notebook,deep-learning,ipython-notebook,scikit-learn,machine-learning,python,learning,courses,diy,learning-by-doing|https://github.com/hangtwenty/dive-into-machine-learning
+django|django|  |2017-06-24|Python|26.4|python,django,views,framework,orm,web,apps,templates,models|https://github.com/django/django
+pallets|flask|  |2017-06-21|Python|27.8|python,flask,web-framework,wsgi,jinja,werkzeug|https://github.com/pallets/flask
+justjavac|free-programming-books-zh_CN|  |2017-06-06|JavaScript|18.6|javascript,python,pdf,android,programming,books,free|https://github.com/justjavac/free-programming-books-zh_CN
+nicolargo|glances|  |2017-06-22|Python|7.5|python,multi-platform,terminal,web,monitoring,system,restful,restful-api|https://github.com/nicolargo/glances
+home-assistant|home-assistant|  |2017-06-24|Python|7.2|python,home-automation,mqtt,raspberry-pi,iot,internet-of-things,asyncio|https://github.com/home-assistant/home-assistant
+eliangcs|http-prompt|  |2017-05-11|Python|6.4|python,syntax-highlighting,shell,cli,http,autocomplete,json,development,web-development,terminal,rest-api,http-client,developer-tools|https://github.com/eliangcs/http-prompt
+jakubroztocil|httpie|  |2017-06-18|Python|30.2|python,debugging,cli,http,client,json,development,terminal,web,rest,curl,http-client,wget,developer-tools,usability,httpie|https://github.com/jakubroztocil/httpie
+donnemartin|interactive-coding-challenges|  |2017-06-21|Python|10.5|algorithm,python,development,programming,data-structure,interview,competitive-programming,coding,interview-practice,interview-questions|https://github.com/donnemartin/interactive-coding-challenges
+ipython|ipython|  |2017-06-22|Python|11.6|python,data-science,jupyter,notebook,ipython,repl|https://github.com/ipython/ipython
+spotify|luigi|  |2017-06-24|Python|7.2|python,hadoop,scheduling,orchestration-framework,luigi|https://github.com/spotify/luigi
+mitmproxy|mitmproxy|  |2017-06-24|Python|8|python,tls,ssl,http,security,proxy,websocket,http2,man-in-the-middle|https://github.com/mitmproxy/mitmproxy
+odoo|odoo|  |2017-06-24|Python|6.9|odoo,odoo-apps,python,business,erp,apps,management|https://github.com/odoo/odoo
+pandas-dev|pandas|  |2017-06-23|Python|10|data-analysis,flexible,pandas,python,alignment|https://github.com/pandas-dev/pandas
+getpelican|pelican|  |2017-06-22|Python|7|python,static-site-generator,pelican|https://github.com/getpelican/pelican
+powerline|powerline|  |2017-06-07|Python|7.6|python,vim,bash,zsh,tmux,fish,ipython,prompt,powerline,statusline|https://github.com/powerline/powerline
+binux|pyspider|  |2017-06-20|Python|9|python,crawler|https://github.com/binux/pyspider
+kennethreitz|python-guide|  |2017-06-22|Batchfile|11.7|python,book,guide,kennethreitz|https://github.com/kennethreitz/python-guide
+rasbt|python-machine-learning-book|  |2017-06-22|Jupyter Notebook|6.6|logistic-regression,data-science,neural-network,machine-learning-algorithms,machine-learning,scikit-learn,python,data-mining|https://github.com/rasbt/python-machine-learning-book
+faif|python-patterns|  |2017-06-20|Python|11.7|python,idioms,design-patterns|https://github.com/faif/python-patterns
+getredash|redash|  |2017-06-24|Python|6.8|redshift,python,visualization,redash,mysql,bigquery,angular,bi,athena,analytics,postgresql|https://github.com/getredash/redash
+reddit|reddit|  |2017-06-13|Python|13.4|python,javascript,reddit|https://github.com/reddit/reddit
+requests|requests|  |2017-06-16|Python|25.7|python,http,requests,forhumans,kennethreitz|https://github.com/requests/requests
+saltstack|salt|  |2017-06-24|Python|7.8|python,event-stream,zeromq,cloud-providers,event-management,configuration-management,remote-execution,infrastructure-management,cloud-management,cloud-provisioning|https://github.com/saltstack/salt
+scikit-learn|scikit-learn|  |2017-06-24|Python|19.4|python,data-science,machine-learning,statistics,data-analysis|https://github.com/scikit-learn/scikit-learn
+scrapy|scrapy|  |2017-06-23|Python|21.2|python,crawler,framework,scraping,crawling|https://github.com/scrapy/scrapy
+SeleniumHQ|selenium|  |2017-06-24|JavaScript|6.9|selenium,java,python,ruby,webdriver|https://github.com/SeleniumHQ/selenium
+getsentry|sentry|  |2017-06-24|Python|13|python,devops,django,monitoring,crash-reporting,error-monitoring,crash-reports,csp-report,error-log|https://github.com/getsentry/sentry
+sqlmapproject|sqlmap|  |2017-06-23|Python|8.9|python,database,detection,sql-injection,pentesting,exploitation,takeover,vulnerability-scanner|https://github.com/sqlmapproject/sqlmap
+donnemartin|system-design-primer|  |2017-06-20|Python|17.5|interview-questions,python,design,development,programming,web,system,design-patterns,interview,web-application,webapp,interview-practice,design-system|https://github.com/donnemartin/system-design-primer
+tensorflow|tensorflow|  |2017-06-24|C++|61.6|tensorflow,python,machine-learning,deep-neural-networks,deep-learning,neural-network,ml,distributed|https://github.com/tensorflow/tensorflow
+nvbn|thefuck|  |2017-06-19|Python|28.6|python,shell|https://github.com/nvbn/thefuck
+tornadoweb|tornado|  |2017-06-21|Python|13.7|python,asynchronous|https://github.com/tornadoweb/tornado

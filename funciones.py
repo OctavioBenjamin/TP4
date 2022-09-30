@@ -1,11 +1,13 @@
 from registro import *
-import os
 from datetime import datetime
+import os
+import os.path
+import pickle
 
 def menu():
     print("""
 ╔════════════════════════════════════════╗
-║          G018 SOFTWARE COMPANY         ║
+║        TP4-G206 SOFTWARE COMPANY       ║
 ╠════════════════════════════════════════╣
 ║1- Cargar Proyectos                     ║
 ║2- Filtrar por tag                      ║
@@ -13,7 +15,7 @@ def menu():
 ║4- Popularidad                          ║
 ║5- Buscar proyecto a actualizar         ║
 ║6- Guardar Populares                    ║
-║7- Mostrar archivo                      ║
+║7- Reconstruir Matriz                   ║
 ║0- Salir                                ║
 ╚════════════════════════════════════════╝""")
     op = int(input("Seleccione la opcion que desea: "))
@@ -40,10 +42,53 @@ def cargar_proyectos():
             proyecto, lenguajes_array= to_proyecto(linea, lenguajes)
             proyectos.append(proyecto)
         archivo.close()
-        proyectos.pop(0)
+        total_cargado = len(proyectos)
+        ignorar_proyectos(proyectos)
     else:
         print("No existe el archivo\n")
-    return proyectos, lenguajes_array
+    
+    return proyectos, lenguajes_array, total_cargado
+
+
+
+def busqueda_binaria(vec, val, inicio, final):
+    if inicio == final:
+        if vec[inicio] > val:
+            return inicio
+        else:
+            return inicio+1
+    if inicio > final:
+        return inicio
+  
+    mid = (inicio+final)//2
+    if vec[mid] < val:
+        return busqueda_binaria(vec, val, mid+1, final)
+    elif vec[mid] > val:
+        return busqueda_binaria(vec, val, inicio, mid-1)
+    else:
+        return mid
+
+def add_in_order(vec):
+    for i in range(1, len(vec)):
+        val = vec[i]
+        j = busqueda_binaria(vec, val, 0, i-1)
+        vec = vec[:j] + [val] + vec[j:i] + vec[i+1:]
+    return vec
+
+
+def ignorar_proyectos(proyectos):
+    repositorios = list()
+    proyectos.pop(0)
+    print(type(proyectos))
+    for proyecto in proyectos:
+
+        if proyecto.repo in repositorios:
+            proyectos.remove(proyecto)
+        elif proyecto.leng == "":
+            proyectos.remove(proyecto)
+        else:
+            repositorios.append(proyecto.repo)
+
 
 
 def mostrar_proyectos(proyectos):
@@ -63,6 +108,7 @@ def limpiar_lista(lista):
     for i in range(len(lista)):
         if lista[i] not in nueva_lista:
             nueva_lista.append(lista[i])
+    nueva_lista.remove('')
     return nueva_lista
 
 def validar_opcion(valor=0, mensaje="Ingrese un valor:"):
@@ -130,7 +176,7 @@ def guardar_datos(encontrados):
     # op = int(input("1. Guardar\n2. No Guardar\n"))
     op = validar_rango(1, 2, mensaje="Ingrese la opcion que desea:\n1. Guardar\n2. No Guardar\n")
     if op == 1:
-        m = open("filtros_encontrados.txt", mode="r+")
+        m = open("filtros_encontrados.txt", mode="w")
         m.write("USUARIO | REPOSITORIO | DESCRIPCION | FECHA DE ACTUALIZACION | LENGUAJE | LIKES | TAGS | URL\n")
         for encontrado in encontrados:
             m.write(f"{to_string(encontrado)}")
@@ -139,11 +185,6 @@ def guardar_datos(encontrados):
     elif op == 2:
         print("Se decidio no guardar los datos... \n")
 
-# def contar_lenguajes(proyectos, lenguajes, contador_lenguajes):
-#     for proyecto in proyectos:
-#         lenguaje_utilizado = proyecto.leng.split(",")
-#         for lenguaje in lenguaje_utilizado:
-#             if 
 
 def busqueda_binaria_asc(v, x):
     izq = 0
@@ -199,7 +240,7 @@ def mostrar_conteo_lenguajes(contador, lenguajes):
     ordenar_mayor_menor_dos_vectores(contador, lenguajes)
     print("")
     for i in range(len(lenguajes)):
-        print(f"{lenguajes[i]} tiene: {contador[i]} proyectos.\n")
+        print(f"{lenguajes[i]} tiene: {contador[i]} proyectos.")
 
 """
 Se quiere conocer los meses en los que se actualizan los proyectos, de acuerdo a la cantidad de estrellas. Para ello se pide, a partir del vector, generar una matriz donde cada fila sea un mes de actualización (no importa de qué año corresponde)  y cada columna una cantidad de estrellas. Cada celda deberá contener la cantidad de proyectos que tengan ese mes de actualización y esa cantidad de estrellas. Las estrellas representan los rangos de likes indicados en el punto 2.
@@ -210,7 +251,7 @@ Mostrar la matriz resultante como una tabla de filas y columnas. Indique, ademá
 def matriz_xmes():
     matriz = list()
     for i in range(12):
-        matriz.append([0]*6)
+        matriz.append([0]*5)
     return matriz
     # #contador_estrellas = ["0","1","2","3","4","5"]
     # #mes = 0
@@ -224,17 +265,9 @@ def matriz_xmes():
     
 
 
-def mostrar_matriz_meses(matriz):
-    meses =  ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]    
-    cont = 0
-    for i in range(12):
-        for j in range(6):
-            if j == 0:
-                matriz[i][j] = meses[cont]
-                cont += 1
+def mostrar_matriz(matriz):
     for i in matriz:
         print(i)
-
 
 def definir_mes(proyecto):
     fecha = proyecto.fecha
@@ -264,16 +297,23 @@ def definir_tabla(proyectos, matriz):
         estrella = definir_estrellas(proyectos[i])
         #print(proyectos[i].repo, type(mes), mes, proyectos[i].likes, type(estrella), estrella)
         #matriz[estrella-1][mes-1] += 1
-        matriz[mes-1][estrella] += 1
+        matriz[mes-1][estrella-1] += 1
     return matriz
 
 def sumar_actualizaciones(matriz, filtro):
     filtro -= 1
     suma = 0
-    for i in range(12):
-        for j in range(6):
-            if filtro == i and j != 0:
-                suma += int(matriz[i][j])
+    # for i in range(12):
+    #     for j in range(5):
+    #         if filtro == i and j != 0:
+    #             suma += int(matriz[i][j])
+
+    # while i != filtro:
+    #     i += 1
+
+    for i in range(5):
+        suma += matriz[filtro][i]
+
     return suma
 
 def fecha_actual():
@@ -293,8 +333,36 @@ def actualizar_url(proyecto):
 #     return proyectos_contador
 
 def definir_registros_de_matriz(matriz):
+    proyectos_por_mes = list()
     for i in range(12):
-        for j in range(6):
-            pass
+        for j in range(5):
+            if matriz[i][j] != 0:
+                mes = i+1
+                tipo = j+1 #Tipo de estrellas (de 1 a 5 estrellas)
+                proyectos = matriz[i][j]
+                elemento = ElementoDeMatriz(mes, tipo, proyectos)
+                proyectos_por_mes.append(elemento)
+    return proyectos_por_mes
             
+def guardar_registros_en_archivo_dat(registro, archivo):
+    archivo_dat = open(archivo, "ab")
+    for elemento in registro:
+        pickle.dump(elemento, archivo_dat)
+    archivo_dat.close()
 
+def leer_archivo_binario(archivo): 
+    m = open(archivo, "rb" )
+    t = os.path.getsize(archivo)
+    print('Se recuperaron estos registros desde el archivo', archivo, ':')
+    matriz = matriz_xmes()
+    while m.tell() < t:
+        elemento = pickle.load(m)
+        reconstruir_matriz(elemento, matriz)
+    m.close()
+
+def reconstruir_matriz(elemento, matriz):
+    for i in range(12):
+        for j in range(5):
+            matriz[elemento.mes - 1][elemento.tipo - 1] = elemento.proyectos
+
+# Definir funcion para generar matriz a aprtir del archivo guardado
