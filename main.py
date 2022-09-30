@@ -11,8 +11,10 @@ def main():
         if opcion == 1:
             proyectos, lenguajes, total_cargado = cargar_proyectos()
             proyectos.pop(0)
-            ordenar_asc_repo(proyectos) # generar funcion add_in_order
+            #ordenar_asc_repo(proyectos) # generar funcion add_in_order
             print("Proyectos Cargados con Exito!")
+            for proyecto in proyectos:
+                print(proyecto)
             print(f"Se han cargado: {len(proyectos)}")
             print(f"Se han omitido: {total_cargado - len(proyectos)}")
             proyectos_cargados = True

@@ -17,7 +17,7 @@ class Proyecto:
         linea += ' '
         linea += '{:<35}'.format(self.repo)
         linea += ' '
-        linea += '{:<140}'.format(self.descri)
+        linea += '{:<5}'.format(self.descri)
         linea += ' '
         linea += '{:<12}'.format(self.fecha)
         linea += ' '

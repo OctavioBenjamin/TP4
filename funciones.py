@@ -1,3 +1,4 @@
+from re import I
 from registro import *
 from datetime import datetime
 import os
@@ -22,12 +23,22 @@ def menu():
     print(" ")
     return op
 
-def ordenar_asc_repo(v):
-    n = len(v)
-    for i in range(n-1):
-        for j in range(i+1, n):
-            if v[i].repo > v[j].repo:
-                v[i], v[j] = v[j], v[i]
+def add_in_order(vec, elemento):
+    izq, der = 0, len(vec)-1
+    pos = der+1
+    while izq <= der:
+        i = (izq + der)//2
+        if elemento.repo == vec[i].repo:
+            pos = i
+            break
+        elif elemento.repo < vec[i].repo:
+            der = i-1
+        else:
+            izq = i + 1
+    if izq > der:
+        pos = izq
+    vec[pos:pos] = [elemento]
+
 
 def cargar_proyectos():
     proyectos = list()
@@ -40,7 +51,8 @@ def cargar_proyectos():
             linea = archivo.readline()
             linea = linea[:-1]
             proyecto, lenguajes_array= to_proyecto(linea, lenguajes)
-            proyectos.append(proyecto)
+            #proyectos.append(proyecto)
+            add_in_order(proyectos, proyecto)
         archivo.close()
         total_cargado = len(proyectos)
         ignorar_proyectos(proyectos)
@@ -68,12 +80,7 @@ def busqueda_binaria(vec, val, inicio, final):
     else:
         return mid
 
-def add_in_order(vec):
-    for i in range(1, len(vec)):
-        val = vec[i]
-        j = busqueda_binaria(vec, val, 0, i-1)
-        vec = vec[:j] + [val] + vec[j:i] + vec[i+1:]
-    return vec
+
 
 
 def ignorar_proyectos(proyectos):
