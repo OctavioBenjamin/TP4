@@ -47,7 +47,7 @@ def cargar_proyectos():
     contador = [0]*2 #0: Cargados 1:Omitidos
     tamaño = os.path.getsize("files/proyectos.csv")
     if os.path.exists("files/proyectos.csv"):
-        archivo = open("files/proyectos.csv", "rt")
+        archivo = open("files/proyectos.csv", "rt", encoding="utf8")
         linea = archivo.readline()
         while archivo.tell() < tamaño:
             linea = archivo.readline()
@@ -181,7 +181,7 @@ def guardar_datos(encontrados):
     # op = int(input("1. Guardar\n2. No Guardar\n"))
     op = validar_rango(1, 2, mensaje="Ingrese la opcion que desea:\n1. Guardar\n2. No Guardar\n")
     if op == 1:
-        m = open("files/filtros_encontrados.txt", mode="w")
+        m = open("files/filtros_encontrados.txt", mode="w", encoding="utf8")
         m.write("USUARIO | REPOSITORIO | DESCRIPCION | FECHA DE ACTUALIZACION | LENGUAJE | LIKES | TAGS | URL\n")
         for encontrado in encontrados:
             m.write(f"{to_string(encontrado)}")
@@ -315,7 +315,7 @@ def guardar_registros_en_archivo_dat(registro, archivo):
     archivo_dat.close()
 
 def leer_archivo_binario(archivo): 
-    m = open(archivo, "rb" )
+    m = open(archivo, "rb")
     t = os.path.getsize(archivo)
     print('Informacion recuperada desde el archivo', archivo, ':')
     matriz = matriz_xmes()
