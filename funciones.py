@@ -188,7 +188,6 @@ def guardar_datos(encontrados):
         for encontrado in encontrados:
             m.write(f"{to_string(encontrado)}")
         m.close()
-        os.system("notepad.exe filtros_encontrados.txt")
     elif op == 2:
         print("Se decidio no guardar los datos... \n")
 
