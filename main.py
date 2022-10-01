@@ -13,8 +13,6 @@ def main():
             proyectos.pop(0)
             #ordenar_asc_repo(proyectos) # generar funcion add_in_order
             print("Proyectos Cargados con Exito!")
-            for proyecto in proyectos:
-                print(proyecto)
             print(f"Se han cargado: {len(proyectos)}")
             print(f"Se han omitido: {total_cargado - len(proyectos)}")
             proyectos_cargados = True
@@ -23,8 +21,12 @@ def main():
             if opcion == 2:
                 filtro = validar_cadena_vacia()
                 encontrados = buscar_por_tag(proyectos, filtro)
-                mostrar_tag_encontrados(encontrados, filtro)
-                guardar_datos(encontrados)
+                
+                if encontrados:
+                    mostrar_tag_encontrados(encontrados, filtro)
+                    guardar_datos(encontrados)
+                else:
+                    print(f"No se han encontrado proyectos con el tag: {filtro}")
 
             elif opcion == 3:
                 lenguajes = limpiar_lista(lenguajes)
