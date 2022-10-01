@@ -10,10 +10,11 @@ def main():
     while opcion != 0:
         opcion = menu()
         if opcion == 1:
-            proyectos, lenguajes, total_cargado = cargar_proyectos()
+            proyectos, lenguajes, contadores = cargar_proyectos()
             print("Proyectos Cargados con Exito!")
-            print(f"Se han cargado: {len(proyectos)}")
-            print(f"Se han omitido: {total_cargado - len(proyectos)}")
+
+            print(f"Proyectos Cargados: {contadores[0]}")
+            print(f"Proyectos Omitidios: {contadores[1]}")
             proyectos_cargados = True
             
         elif proyectos_cargados:    

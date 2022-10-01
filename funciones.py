@@ -41,8 +41,10 @@ def add_in_order(vec, elemento):
 
 
 def cargar_proyectos():
+    repositorios = list()
     proyectos = list()
     lenguajes = list()
+    contador = [0]*2 #0: Cargados 1:Omitidos
     tamaño = os.path.getsize("files/proyectos.csv")
     if os.path.exists("files/proyectos.csv"):
         archivo = open("files/proyectos.csv", "rt")
@@ -51,14 +53,22 @@ def cargar_proyectos():
             linea = archivo.readline()
             linea = linea[:-1]
             proyecto, lenguajes_array= to_proyecto(linea, lenguajes)
-            add_in_order(proyectos, proyecto)
+
+            # Omitir proyectos mientras se cargan
+            # Contador -> 0: Cargados    1:Omitidos
+            if proyecto.repo not in repositorios and len(proyecto.leng) != 0:
+                if proyecto.repo != "repositorio":
+                    add_in_order(proyectos, proyecto)
+                    repositorios.append(proyecto.repo)
+                    contador[0]+=1
+            else:
+                contador[1]+=1
+
         archivo.close()
-        total_cargado = len(proyectos)
-        ignorar_proyectos(proyectos)
     else:
         print("No existe el archivo\n")
     
-    return proyectos, lenguajes_array, total_cargado
+    return proyectos, lenguajes_array, contador
 
 
 
@@ -82,18 +92,15 @@ def busqueda_binaria(vec, val, inicio, final):
 
 def ignorar_proyectos(proyectos):
     repositorios = list()
-    proyectos.pop(0)
+    lista_proyecto_limpia = list()
     for proyecto in proyectos:
 
-        if proyecto.repo in repositorios:
-            proyectos.remove(proyecto)
-        elif proyecto.leng == "":
-            proyectos.remove(proyecto)
-        elif proyecto.leng == "lenguaje":
-            proyectos.remove(proyecto)
-        else:
-            repositorios.append(proyecto.repo)
+        if len(proyecto.leng) == 0:
+            if proyecto.repo not in repositorios:
+                repositorios.append(proyecto.repo)
+                lista_proyecto_limpia.append(proyecto)
 
+    return lista_proyecto_limpia
 def ordenar_asc(v):
     n = len(v)
     for i in range(n-1):
